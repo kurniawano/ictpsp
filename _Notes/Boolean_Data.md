@@ -1,7 +1,7 @@
 ---
 title: Boolean Data
-permalink: /notes/boolean-data
-key: notes-boolean-data
+permalink: /notes/Boolean-data
+key: notes-Boolean-data
 layout: article
 nav_key: Notes
 sidebar:
@@ -14,17 +14,17 @@ show_date: false
 ---
 
 ## True or False?
-In our previous lessons, we mentioned that the branch structure is the one that gives a computer program flexibility as it allows us to do various things depending on some conditions. This also means that the branch structure depends on being able to check those conditions. 
+In our previous lessons, we mentioned that the branch structure is the one that gives a computer program flexibility, as it allows us to do various things depending on some conditions. This also means that the branch structure depends on being able to check those conditions. 
 
-Recall in our cadence target example in the previous lesson that we want to determine what the chatbot should do depending on whether the average cadence hits the target that the user has set or not. Whether the user hits the target or not is what we call as **Boolean** data. 
+Recall in our cadence target example from the previous lesson that we want to determine what the chatbot should do depending on whether the average cadence hits the target that the user has set or not. Whether the user hits the target or not is what we call **Boolean** data. 
 
-Boolean data only has two values, either it is **True** or **False**. In our example, it is whether the user hits the target (true) or it does not hit the target (false). The word Boolean comes from a Mathematician with the name [George Boole](https://en.wikipedia.org/wiki/George_Boole) who devised the boolean algebra. 
+Boolean data only has two values: either it is **True** or **False**. In our example, it is whether the user hits the target (True) or it does not hit the target (False). The word Boolean comes from a mathematician named [George Boole](https://en.wikipedia.org/wiki/George_Boole), who devised the Boolean algebra. 
 
-As with any other data type, you should ask, "how do we create this data?". Similarly, we should ask, how we can create Boolean data. Since Boolean data is either True or False, we usually create them through some operators. There are two kind of operators that we use to create boolean data: relational operators and logical operators.
+As with any other data type, you should ask, "How do we create this data?" Similarly, we should ask how we can create Boolean data. Since Boolean data is either True or False, we usually create it through some operators. There are two kinds of operators that we use to create Boolean data: relational operators and logical operators.
 
 ## Relational Operators
 
-Relational operators relates two values and results in a boolean value indicating whether the relation is True or False. Below is a table of some of the common relational operators.
+Relational operators relates two values and results in a Boolean value indicating whether the relation is True or False. Below is a table of some of the common relational operators.
 
 | operator | checking                           |
 |----------|------------------------------------|
@@ -37,7 +37,7 @@ Relational operators relates two values and results in a boolean value indicatin
 
 Notice that the operator to check equality is `==` and not `=`. Recall that `=` is the assignment operator. Notice also that for checking if two values are not equal it uses `!=`. You will see the `!` operator in the logical operator again but it will have a different meaning. 
 
-But now, let's see how we can generate boolean data from these operators. Below are some examples.
+But now, let's see how we can generate Boolean data from these operators. Below are some examples.
 
 ```python
 >>> 3 == 4
@@ -67,7 +67,7 @@ True
 False
 ```
 
-We can use the equality operator to compare two strings. However, this comparison is case sensitive. In fact, string comparison takes into acount the whitespaces in the string. See the following comparison.
+We can use the equality operator to compare two strings. However, this comparison is case-sensitive. In fact, string comparison takes into acount the whitespaces in the string. See the following comparison.
 
 ```python
 >>> 'abc' == ' abc '
@@ -100,7 +100,7 @@ False
 False
 ```
 
-All the evaluated results are false in the three comparison above. The reason is that the way Python compares two strings is by comparing its ASCII numbering of the characters. You can see a list of ASCII numbering for different characters in [this website](https://www.asciitable.com). But notice that small letter `a` has an ASCII number of 97 while the capital letter `A` has an ASCII number er of 65. In fact, all the capital letters has a lower ASCII numberings than the small letters. That's the reason why all the above comparisons result in False.
+All the evaluated results are False in the three comparisons above. The reason is that the way Python compares two strings is by comparing the ASCII numbering of the characters. You can see a list of ASCII numbering for different characters on [this website](https://www.asciitable.com). Notice that lowercase letter `a` has an ASCII number of 97, while the uppercase letter `A` has an ASCII number er of 65. In fact, all the uppercase letters have a lower ASCII numbers than the lowercase letters. That's the reason why all the above comparisons result in False.
 
 How about comparing two strings that has more than one letter? Let's see a few results below.
 
@@ -145,7 +145,7 @@ True
 True
 ```
 
-On top of that Python is able to convert all its other built-in data type into Boolean data. This means that certain values are considered as False while the rest is considered as True. Let's see some of them. We are going to use the `bool()` function to convert these other data to boolean data.
+On top of that Python is able to convert all its other built-in data types into Boolean data. This means that certain values are considered as False, while the rest are considered as True. Let's see some of them. We are going to use the `bool()` function to convert these other data to Boolean data.
 
 
 ```python
@@ -178,7 +178,7 @@ False
 
 ## Logical Operators
 
-On top of relational operators, logical operators also evaluate to boolean data. There are three common logical operators as shown in the table below.
+On top of relational operators, logical operators also evaluate to Boolean data. There are three common logical operators as shown in the table below.
 
 | operator | remarks                                                      |
 |----------|--------------------------------------------------------------|
@@ -186,7 +186,7 @@ On top of relational operators, logical operators also evaluate to boolean data.
 | a or b   | true if at least one of the operands (either a or b) is true |
 | not a    | true if a is false and false if a is true                    |
 
-In the above table, `a` and `b` can be any other expressions that can be evaluated to boolean data. This means that we can put some relational operators in either `a` and `b`.  Let's see some examples below.
+In the above table, `a` and `b` can be any other expressions that can be evaluated to Boolean data. This means that we can put some relational operators in either `a` and `b`.  Let's see some examples below.
 
 ```python
 >>> 3 < 4 or 3 > 5
@@ -214,7 +214,7 @@ True
 
 The two expressions above are the same.
 
-The last logical operator always invert the boolean values. 
+The last logical operator always invert the Boolean values. 
 
 ```python
 >>> not True
@@ -227,7 +227,7 @@ True
 False
 ```
 
-You can combine all the relational and logical operators together. It is recommended to use parenthesis to clarify which order we want the operations to be evaluated.
+You can combine all the relational and logical operators together. It is recommended to use parentheses to clarify which order we want the operations to be evaluated.
 
 ```python
 >>> (3 < 4) or (5 < 1) and True
@@ -238,7 +238,7 @@ False
 
 ## Evaluating Boolean Expressions
 
-As with the arithmetic operators, relational and logical operators also have their precedence. This determines which operator to be evaluated first. It is important to know this as it may help us greatly in debugging our code.
+As with the arithmetic operators, relational and logical operators also have their precedence. This determines which operator is evaluated first. It is important to know this, as it may help us greatly in debugging our code.
 
 Consider the below example.
 
@@ -298,7 +298,7 @@ Let's add on these precedence to our previous table. We now have the following.
 | 7          | and      | Boolean AND operator.                                                                                                           |
 | 8          | or       | Boolean OR operator.                                                                                                           |
 
-Now, we know how to evaluate boolean data. We are not ready to use it in our program especially in the *branch* and *iterative* structure. Before we move on to the *branch* structure. There is one simple useful use of boolean data in programming and that is to **T**est. This is the last part of the PCDIT framework and the way we do it is to write test and implementation in small bites repetitively. 
+Now, we know how to evaluate Boolean data. We are not ready to use it in our program especially in the *branch* and *iterative* structure. Before we move on to the *branch* structure. There is one simple useful use of Boolean data in programming and that is to **T**est. This is the last part of the PCDIT framework and the way we do it is to write test and implementation in small bites repetitively. 
 
 ## Testing Using Assert
 
@@ -308,9 +308,9 @@ One simple way to test your code is to use the `assert` statement in Python. Thi
 assert condition
 ```
 
-The way it works is that if the `condition` is `True`, Python will continue to the next line without complaining. However, if the `condition` is `False`, Python will throw an exception or an error. This is useful when writing codes because we can fill in our codes with assert statements to test it and our programme will continue running as it is as long as all those conditions are fulfilled. Only when there is an error, Python will stop and tell us at which `assert` statement that our test fails. Let's take a look at how we can make use of it in our PCDIT framework.
+The way it works is that if the `condition` is `True`, Python will continue to the next line without complaining. However, if the `condition` is `False`, Python will throw an exception or an error. This is useful when writing code because we can fill in our code with assert statements to test it, and our program will continue running as it is, as long as all those conditions are fulfilled. Only when there is an error Python will stop and tell us at which `assert` statement that our test fails. Let's take a look at how we can make use of it in our PCDIT framework.
 
-Let's look at some of the functions we have created in the past lessons. One of the first function we created was `compute_cadence_for_30sec(steps)`. When we are trying to write this function, instead of starting with some implementation, we can start with some **expectation**. This can be written as a series of test. These expectations can be writtend based on our specifications for that problem. For example, in the function above, we expect that this function will caculate the cadence given the number of steps. We can write a few expected output before we write any implementations.
+Let's look at some of the functions we have created in the past lessons. One of the first functions we created was `compute_cadence_for_30sec(steps)`. When we are trying to write this function, instead of starting with some implementation, we can start with some **expectation**. This can be written as a series of tests. These expectations can be written based on our specifications for that problem. For example, in the function above, we expect that this function will calculate the cadence given the number of steps. We can write a few expected outputs before we write any implementation.
 
 ```python
 assert compute_cadence_for_30sec(10) == 20
@@ -344,9 +344,9 @@ You can try the above code in Python Tutor shown below.
 
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20compute_cadence_for_30sec%28steps%29%3A%0A%20%20return%20steps%20*%202%0A%0Aassert%20compute_cadence_for_30sec%2810%29%20%3D%3D%2020%0Aassert%20compute_cadence_for_30sec%2821%29%20%3D%3D%2042%0Aassert%20compute_cadence_for_30sec%2825%29%20%3D%3D%2050%0Aassert%20compute_cadence_for_30sec%2831%29%20%3D%3D%2062&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
-Notice that Python does not produce any output in the standard output since we do not have any `print()` statement. However, the program finishes without error. The reason that the program finishes is because our **I**mplementation fulfills all the `assert` statements which is our expectation. 
+Notice that Python does not produce any output in the standard output since we do not have any `print()` statement. However, the program finishes without error. The reason that the program finishes is because our **I**mplementation fulfills all the `assert` statements, which is our expectation. 
 
-To see what happens if we have a wrong **I**mplementation, let's try changing our implementation purposely to introduce a wrong implementation. Let's use `**` instead of `*` in our calculation. 
+To see what happens if we have a wrong **I**mplementation, let's try changing our implementation purposely to introduce a wrong one. Let's use `**` instead of `*` in our calculation. 
 
 ```python
 def compute_cadence_for_30sec(steps: int) -> int:
@@ -381,4 +381,4 @@ You can also try it in Python Tutor and it will stop on the first `assert` state
 
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20compute_cadence_for_30sec%28steps%29%3A%0A%20%20return%20steps%20**%202%0A%0Aassert%20compute_cadence_for_30sec%2810%29%20%3D%3D%2020%0Aassert%20compute_cadence_for_30sec%2821%29%20%3D%3D%2042%0Aassert%20compute_cadence_for_30sec%2825%29%20%3D%3D%2050%0Aassert%20compute_cadence_for_30sec%2831%29%20%3D%3D%2062&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
-The `assert` statement is useful in driving our implementation. As shown in the above example, we can immediately know there is a bug in our implementation since our test fails. This is part of **Test Driven Development** (TDD). In TDD, we write our test before we write any implementation. As we go along these lessons, we will share more on how to write test that drives implementation. But for now, we can see how boolean data can be used for testing our implementation. 
+The `assert` statement is useful in driving our implementation. As shown in the above example, we can immediately know there is a bug in our implementation since our test fails. This is part of **Test Driven Development** (TDD). In TDD, we write our test before we write any implementation. As we go along these lessons, we will share more on how to write test that drives implementation. But for now, we can see how Boolean data can be used for testing our implementation. 
